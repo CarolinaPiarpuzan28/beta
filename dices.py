@@ -10,6 +10,11 @@ print dices values
 import os 
 from random import randint, uniform
 
+# Functions #################
+
+def get_dices():
+    
+
 os.system ('clear')
 print(":::Welcome to my parchis:::")
 
@@ -20,3 +25,5 @@ dice2 = randint(1,6)
 
 print(f"Dice 1:{dice1}")
 print(f"Dice 2:{dice2}")
+
+get_dices()
