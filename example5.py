@@ -44,8 +44,23 @@ def calc3(x, y, z):
     elif (z == '3'):
         ans = x * y
     elif (z == '4'):
-        ans = x / y 
-    return ans
+        if y == 0:
+            return "No se puede dividir entre 0"
+        ans = x / y
+    elif (z == '5'):
+        if y == 0:
+            division = "No se puede dividir entre 0"
+        else:
+            division = x / y
+        return ("Suma: " + str(x + y) + "\n" +
+                "Resta: " + str(x - y) + "\n" +
+                "Multiplicación: " + str(x * y) + "\n" +
+                "División: " + str(division) + "\n" +
+                "Confirmación: operación realizada con éxito.")
+    else:
+        return "Error: opción no válida. Debe ser un valor entre 1 y 5."
+
+    return str(ans) + "\nConfirmación: operación realizada con éxito."
 
 ##### Main #####
 num1 = float(input('Press first number: '))
@@ -60,13 +75,13 @@ opt = input("::. Press any option: ")
 
 
 res1 = calc1(num1, num2, opt)
-print(f"The result with f1 is: {res1}")
+print(f"The result is: {res1}") 
 
 res2 = calc2(num1, num2, opt)
-print(f"The result with f2 is: {res2}")
+print(f"The result is: {res2}")
 
 res3 = calc3(num1, num2, opt)
-print(f"The result with f3 is: {res3}")
+print(f"The result is: {res3}")
 
 
 
